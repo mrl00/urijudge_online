@@ -1,1 +1,1 @@
-# urionlinejudge
+# urijudge_online
