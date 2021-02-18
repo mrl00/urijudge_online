@@ -23,9 +23,3 @@ main = do
     contents <- getContents
     mapM_ putStrLn $ map (charToString . catchChar . getIndex) $ chck $ lines contents
 
-
-
-
-
-
-
