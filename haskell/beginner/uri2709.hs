@@ -15,15 +15,12 @@ fixed all@(n:ns) = [k | k <- numbers seq salt] : fixed (drop (n + 1) ns)
       seq = reverse $ take n ns
       numbers [] s = []
       numbers nb@(x:xs) s = x : numbers (drop s nb) s
-  
-    
 
 dp :: [Int] -> [String]
 dp inp@(k:ks) = map (ans . isPrime . fromIntegral . sum) $ fixed inp
   where
     ans False = "Bad boy! I’ll hit you."
     ans True  = "You’re a coastal aircraft, Robbie, a large silver aircraft."
-    
 
 main :: IO ()
 main = do
