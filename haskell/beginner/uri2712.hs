@@ -1,12 +1,24 @@
 module Main where
 
-import Text.Regex.TDFA
+import Data.Char
+import Data.List
 
 days :: Int -> String
 days = (["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"] !!)
 
+
+validade all@(x:xs) | length all == 8 = test
+                    | otherwise = False
+  where
+    isnumbers = and $ map isAsciiUpper (take 3 all)
+    isalpha = and $ map isNumber (drop 4 all)
+    hif = all !! 3 == '-'
+    test = and [isnumbers, isalpha, hif]
+
+
+
 ml :: String -> String
-ml s | (s =~ "(^[A-Z]{3}-[0-9]{4}$)" :: Bool) = mmm (read [last s] :: Int)
+ml s | validade s = mmm (read [last s] :: Int)
      | otherwise = "FAILURE"
    where mmm x | x `elem` [1,2] = days 0
                | x `elem` [3,4] = days 1
