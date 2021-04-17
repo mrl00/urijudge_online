@@ -1,0 +1,54 @@
+[0m2021.02.22 11:12:59 INFO  Started: Metals version 0.9.10 in workspace '/media/16D494246FF2BEE9/Programming/urijudgeonline/scala' for client vscode 1.53.2.[0m
+[0m2021.02.22 11:13:01 INFO  time: initialize in 1.53s[0m
+[0m2021.02.22 11:13:02 WARN  Build server is not auto-connectable.[0m
+[0m2021.02.22 11:13:02 WARN  no build tool detected in workspace '/media/16D494246FF2BEE9/Programming/urijudgeonline/scala'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.02.22 11:13:05 INFO  no build target: using presentation compiler with only scala-library[0m
+[0m2021.02.22 11:13:06 WARN  no build target for: /media/16D494246FF2BEE9/Programming/urijudgeonline/scala/beginner/uri1000.sc[0m
+Feb 22, 2021 11:13:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Feb 22, 2021 11:13:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Feb 22, 2021 11:13:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+Feb 22, 2021 11:13:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+Feb 22, 2021 11:13:06 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+[0m2021.02.22 11:13:19 ERROR Error getting Ammonite 2.3.8-4-88785969 (scala 2.12.13)
+ammrunner.CoursierError: Error fetching Ammonite 2.3.8-4-88785969 for scala 2.12.13
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:73)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:91)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:159)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:237)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:237)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:188)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3(Ammonite.scala:213)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3$adapted(Ammonite.scala:206)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:832)
+Caused by: coursierapi.error.SimpleResolutionError$1: Error downloading com.lihaoyi:ammonite-repl-api_2.12.13:2.3.8-4-88785969
+  not found: /home/qqx/.ivy2/local/com.lihaoyi/ammonite-repl-api_2.12.13/2.3.8-4-88785969/ivys/ivy.xml
+  not found: https://repo1.maven.org/maven2/com/lihaoyi/ammonite-repl-api_2.12.13/2.3.8-4-88785969/ammonite-repl-api_2.12.13-2.3.8-4-88785969.pom
+	at coursierapi.error.SimpleResolutionError.of(SimpleResolutionError.java:11)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.simpleResError(ApiHelper.scala:326)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper$.doFetch(ApiHelper.scala:359)
+	at coursierapi.shaded.coursier.internal.api.ApiHelper.doFetch(ApiHelper.scala)
+	at coursierapi.Fetch.fetchResult(Fetch.java:244)
+	at ammrunner.AmmoniteFetcher.maybeResult$1(AmmoniteFetcher.scala:70)
+	at ammrunner.AmmoniteFetcher.command(AmmoniteFetcher.scala:91)
+	at scala.meta.internal.metals.ammonite.Ammonite.command(Ammonite.scala:159)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$start$4(Ammonite.scala:237)
+	at scala.Option.map(Option.scala:230)
+	at scala.meta.internal.metals.ammonite.Ammonite.start(Ammonite.scala:237)
+	at scala.meta.internal.metals.ammonite.Ammonite.doImport$1(Ammonite.scala:188)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3(Ammonite.scala:213)
+	at scala.meta.internal.metals.ammonite.Ammonite.$anonfun$maybeImport$3$adapted(Ammonite.scala:206)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.lang.Thread.run(Thread.java:832)
+[0m
+[0m2021.02.22 11:13:51 WARN  no build target for: /media/16D494246FF2BEE9/Programming/urijudgeonline/scala/beginner/uri1000.sc[0m
