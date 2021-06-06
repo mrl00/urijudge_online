@@ -4,8 +4,8 @@ pasta contendo alguns problemas resolvidos
 
 ## linguagens
 
--- c
--- haskell
--- java
--- rust
--- scala
+- c
+- haskell
+- java
+- rust
+- scala
