@@ -3,5 +3,5 @@ import Math.pow
 object Main extends App {
   val π = 3.14159
   val r = io.StdIn.readDouble()
-  printf("A=%.4f\n", π*pow(r,2))
+  printf("%.4f\n", π * pow(r, 2))
 }

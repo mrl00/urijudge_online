@@ -1,4 +1,5 @@
 import java.io.DataOutput
+
 object Main extends App {
   val nam = io.StdIn.readLine()
   val sal = io.StdIn.readFloat()

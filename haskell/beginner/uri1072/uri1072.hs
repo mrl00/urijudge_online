@@ -1,10 +1,10 @@
 module Main where
 
-main = do
-    interact processInput
-    
+processInput :: String -> String
 processInput input = unlines [perLine line | line <- take 3 (lines input)]
-    where perLine line = reverse line
+  where
+    perLine line = reverse line
 
-
-
+main :: IO ()
+main = do
+  interact processInput
