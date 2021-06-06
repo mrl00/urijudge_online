@@ -1,9 +1,8 @@
 module Main where
 
-import Control.Monad
-import Text.Printf
+import Text.Printf (printf)
 
 main :: IO ()
 main = do
-   x <- readLn :: IO Int
-   printf "%d minutos\n" (x*2)
+  x <- readLn :: IO Int
+  printf "%d minutos\n" (x * 2)

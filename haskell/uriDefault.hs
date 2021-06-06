@@ -1,8 +1,9 @@
 module Main where
 
-import Text.Printf
-import Data.List
+import Data.List ()
+import FB.Collatz (collatzConj)
+import Text.Printf ()
 
 main :: IO ()
 main = do
-   x <- getLine
+  print . collatzConj 7

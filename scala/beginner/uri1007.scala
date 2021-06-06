@@ -3,5 +3,5 @@ object Main extends App {
   val b = io.StdIn.readInt()
   val c = io.StdIn.readInt()
   val d = io.StdIn.readInt()
-  printf("DIFERENCA = %d\n", (a*b-c*d))
+  printf("DIFERENCA = %d\n", (a * b - c * d))
 }

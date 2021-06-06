@@ -5,6 +5,5 @@ reindeer = (["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid"
 
 main :: IO ()
 main = do
-    input <- getLine
-    putStrLn $ reindeer $ sum (map read (words input) :: [Int]) `mod` 9
-    
+  input <- getLine
+  putStrLn $ reindeer $ sum (map read (words input) :: [Int]) `mod` 9

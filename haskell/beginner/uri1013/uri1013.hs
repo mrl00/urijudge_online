@@ -4,10 +4,9 @@ import Text.Printf
 
 input :: IO [Double]
 input = do
-   x <- getLine
-   return $ map (\x -> read x :: Double) (words x)
+  map (\x -> read x :: Double) . words <$> getLine
 
 main :: IO ()
 main = do
-   x <- input
-   printf "%.0f eh o maior\n" $ maximum x
+  x <- input
+  printf "%.0f eh o maior\n" $ maximum x

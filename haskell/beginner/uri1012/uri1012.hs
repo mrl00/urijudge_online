@@ -1,32 +1,34 @@
 module Main where
 
-import Control.Monad
-import Text.Printf
+import Text.Printf (printf)
 
 myPi :: Double
 myPi = 3.14159
 
-
 input :: IO [Double]
 input = do
-   x <- getLine
-   return $ map (\x -> read x :: Double) (words x)
+  map (\x -> read x :: Double) . words <$> getLine
 
-triangle [a,_,c] = (a * c) / 2.0
+triangle :: Fractional a => [a] -> a
+triangle [a, _, c] = (a * c) / 2.0
 
-circle [_,_,c] = myPi * c ^ 2
+circle :: [Double] -> Double
+circle [_, _, c] = myPi * c ^ 2
 
-trapezium [a,b,c] = c*(abs $ a + b)/2.0
+trapezium :: Fractional a => [a] -> a
+trapezium [a, b, c] = c * abs (a + b) / 2.0
 
-square [_,b,_] = b^2
+square :: Num a => [a] -> a
+square [_, b, _] = b ^ 2
 
-rectangle [a,b,_] = a * b  
+rectangle :: Num a => [a] -> a
+rectangle [a, b, _] = a * b
 
 main :: IO ()
 main = do
-   x <- input
-   printf "TRIANGULO: %.3f\n" $ triangle x
-   printf "CIRCULO: %.3f\n" $ circle x
-   printf "TRAPEZIO: %.3f\n" $ trapezium x
-   printf "QUADRADO: %.3f\n" $ square x
-   printf "RETANGULO: %.3f\n" $ rectangle x
+  x <- input
+  printf "TRIANGULO: %.3f\n" $ triangle x
+  printf "CIRCULO: %.3f\n" $ circle x
+  printf "TRAPEZIO: %.3f\n" $ trapezium x
+  printf "QUADRADO: %.3f\n" $ square x
+  printf "RETANGULO: %.3f\n" $ rectangle x
