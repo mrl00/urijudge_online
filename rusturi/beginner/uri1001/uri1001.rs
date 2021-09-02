@@ -1,12 +1,19 @@
 use std::io;
 
 fn main() {
-    let mut n = String::new();
+    let mut a = String::new();
+    let mut b = String::new();
+
     io::stdin()
-        .read_line(&mut n)
+        .read_line(&mut a)
         .expect("failed to read input.");
-    
-    let n: i32 = n.trim().parse().expect("invalid input");
-    
-    println!("{:?}", n);
+
+    io::stdin()
+        .read_line(&mut b)
+        .expect("failed to read input.");
+
+    let a: i32 = a.trim().parse().expect("invalid input");
+    let b: i32 = b.trim().parse().expect("invalid input");
+
+    println!("X = {}", a + b);
 }
